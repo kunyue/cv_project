@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 2.4)
+
+
+PROJECT(LABO5)
+
+# paths 
+INCLUDE_DIRECTORIES(src)
+INCLUDE_DIRECTORIES(/usr/local/include)
+LINK_DIRECTORIES(/usr/local/lib)
+LINK_DIRECTORIES(/usr/lib)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+find_package(OpenCV REQUIRED)
+
+ADD_EXECUTABLE(project1 src/project1.cpp src/CVTool.cpp)
+TARGET_LINK_LIBRARIES(project1 ${OpenCV_LIBS})
+SET(CMAKE_BUILD_TYPE Release)

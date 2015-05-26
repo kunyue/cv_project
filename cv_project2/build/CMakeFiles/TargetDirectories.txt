@@ -1,0 +1,1 @@
+/home/ksu/Documents/TestCode/opencv/cv_project2/build/CMakeFiles/guass.dir
